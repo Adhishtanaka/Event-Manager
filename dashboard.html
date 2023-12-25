@@ -1,0 +1,133 @@
+<!--html code-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event</title>
+    <link rel="stylesheet" href="Global.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="container">
+
+      <!--navbar-->
+
+        <nav style="background-color: white;" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.php">Categories</a>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+        <br>
+
+        <h3>Dashboard</h3><hr>
+        <br><br><br>
+
+        <!--code for form-->
+         <center><h6>Add New Event</h6></center>
+        <!--validate function is uded to validate user input data in form-->
+        <form action="event.php" method="post" name="uev" style="max-width: 400px; margin: 0 auto;border: 1px solid black; padding: 20px;" onsubmit="return validateevent()"  enctype="multipart/form-data">
+            <div class="col-auto">
+                <label for="useremail" class="form-label">Email address</label>
+                <input class="form-control" type="text" disabled readonly name="useremail" >
+              </div><br> 
+              
+            <div class="mb-3">
+          <label for="eventti" class="form-label">Event Title</label>
+          <input type="Text" class="form-control" id="eventti" name="eventti">
+        </div>
+      
+       
+        <div class="mb-3">
+            <label for="eventdis" class="form-label">Event Description</label>
+            <textarea class="form-control" id="eventdis" rows="5" name="eventdis"></textarea>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="tag" class="form-label">Event Category</label>
+            <select class="form-select" aria-label="Default select example" name="tag">
+              <option selected value="0">None</option>
+              <option value="1"> Events</option>     
+              <option value="2">Club Events</option>
+              <option value="3">Sports Events</option>
+              <option value="4">Other Events</option>
+              
+            </select></div>
+
+            <div class="mb-3">
+                <label for="datepicker" class="form-label">Date & Time</label>
+                <input class="form-control" type="datetime-local" id="datepicker" name="datepicker">
+              </div>
+              <br>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Upload Event Banner</label>
+            <input class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png, .svg, .gif, .webp" name="formFile">
+          </div>
+         
+          <input type="hidden" name="hiddenuseremail" id="hiddenuseremail">
+
+
+          
+          <br>
+        <button type="submit" class="btn btn-dark" style="font-size: 14px;" aria-describedby="accountHelp" name="submit">Submit</button>
+        </div>
+        <br><br>
+      </form>
+
+
+
+
+
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-focus="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Alert</h5>
+        </div>
+        <div class="modal-body">
+          <center>
+            <a href="Signin.html"><button type="button" class="btn btn-dark">Sign in</button></a>
+            <a href="Signup.html"><button type="button" class="btn btn-dark">Sign Up</button></a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Bootstrap 5-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--Social Media Icons-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!--add main.js-->
+<script type="text/javascript" src="./main.js"></script>
+
+
+<script>
+  //excute a function call checkdashlogin to check user is loged in or not
+document.addEventListener("DOMContentLoaded", function () {
+checkdashlogin();
+});</script>
+
+</body>
+</html>

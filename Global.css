@@ -1,0 +1,19 @@
+
+/*
+code for body
+*/
+body {
+    min-height: 100vh;   
+  }
+
+  /*
+code for large navbar test & keep space between navbar link
+*/
+.nav-item{
+    font-size: large;
+    margin-left: 1.5em;
+}
+
+
+
+  
